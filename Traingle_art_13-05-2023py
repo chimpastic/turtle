@@ -1,0 +1,25 @@
+import turtle
+
+# Set up the turtle
+screen = turtle.Screen()
+screen.bgcolor("black")
+turtle.speed(8)
+
+# Set up the turtle's shape
+turtle.shape("turtle")
+
+# Define a list of colors
+colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+
+# Draw a turtle-inspired pattern with solid-colored triangles
+for i in range(36):
+    turtle.fillcolor(colors[i % len(colors)])  # Cycle through the colors
+    turtle.begin_fill()  # Start filling the shape
+    for _ in range(3):
+        turtle.forward(100)
+        turtle.right(120)
+    turtle.end_fill()  # End filling the shape
+    turtle.right(10)
+
+# Finish the drawing
+turtle.done()
